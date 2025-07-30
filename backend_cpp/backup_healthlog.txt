@@ -1,0 +1,5 @@
+[Entry - 2025-07-30 14:28:00]
+Heart Rate   : 72 bpm
+Sleep Hours  : 5 hrs
+Water Intake : 9 L
+-----------------------------

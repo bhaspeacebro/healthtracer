@@ -1,0 +1,158 @@
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(to right, #e7f3f3, #d0f0ff);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* 📝 Main Form Styling */
+form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.2);
+  width: 320px;
+  transition: box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+}
+
+form:hover {
+  box-shadow: 0 10px 30px rgba(0, 119, 204, 0.3);
+}
+
+h1 {
+  color: #0077cc;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+  letter-spacing: 0.5px;
+}
+
+/* 🎨 Label with Emoji Badge */
+label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  color: #333333;
+  font-weight: 600;
+}
+
+label::before {
+  content: attr(data-icon);
+  font-size: 1.2em;
+}
+
+/* ✅ Input Field + Animation */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccddee;
+  border-radius: 6px;
+  background-color: #f9fdfd;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #0077cc;
+  transform: scale(1.02);
+  outline: none;
+}
+
+input[type="number"]:valid {
+  border-color: #00cc66;
+}
+
+/* 🧠 Submit Button */
+button {
+  width: 100%;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* 📊 Floating Sidebar */
+.sidebar {
+  position: sticky;
+  top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.sidebar h2 {
+  font-size: 1.1em;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* 🧠 Modal Popup */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  width: 320px;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+}
+
+.modal.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal h3 {
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+.modal p {
+  font-size: 1em;
+  color: #333;
+}
+
+/* ✨ Fade Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhaskar's Health Logger</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 📊 Floating Sidebar -->
+  <div class="sidebar">
+    <h2>📌 Recent Logs</h2>
+    <ul id="previewList">
+      <!-- Entries will appear here dynamically -->
+    </ul>
+  </div>
+
+  <!-- 🩺 Main Health Form -->
+  <div class="container">
+    <h1>🩺 Daily Health Snapshot</h1>
+    <form id="healthForm">
+      <div class="input-group">
+        <label for="sleep" data-icon="😴">Sleep (hrs):</label>
+        <input type="number" id="sleep" name="sleep" placeholder="e.g. 7" required>
+      </div>
+      <div class="input-group">
+        <label for="steps" data-icon="👟">Steps Walked:</label>
+        <input type="number" id="steps" name="steps" placeholder="e.g. 6000" required>
+      </div>
+      <div class="input-group">
+        <label for="water" data-icon="💧">Water Intake (ml):</label>
+        <input type="number" id="water" name="water" placeholder="e.g. 2500" required>
+      </div>
+      <button type="submit">📤 Log My Day</button>
+    </form>
+  </div>
+
+  <!-- 🧠 Modal for Summary Popup -->
+  <div class="modal" id="modal">
+    <h3></h3>
+    <p></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
